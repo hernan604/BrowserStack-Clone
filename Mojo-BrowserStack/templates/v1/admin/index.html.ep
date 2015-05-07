@@ -1,0 +1,34 @@
+%extends 'v1/wrapper';
+
+<script>
+jloader.load('/v1/js/jquery.js', { eval : false });
+jloader.load('MyApp')
+var app = new MyApp({
+    deps    : [
+        jloader.load('TestSession'),
+        jloader.load('User'),
+    ]
+});
+</script>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class='col-left col-md-3'>
+
+            <div class='row accesskeys'>
+                <span class='show'>Username and Access keys</span>
+                <div class='content'></div>
+            </div>
+            <div class='machine-screenshot'>
+            </div>
+            <div class='row'>
+                Test sessions:
+                <ul class='test-sessions'>
+                </ul>
+            </div>
+        </div>
+        <div class='col-right col-md-9'>
+        </div>
+    </div>
+</div>

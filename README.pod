@@ -1,0 +1,23 @@
+=head1 BrowserStack Clone
+
+This is another of my on going project to re-create the browserstack functionality to test software with selenium on multiple vms, browser versions and save the test logs.
+
+=head2 Description
+
+This browserstack clone is built on perl, with plack and mojolicious. When finished it will allow 
+
+=head2 Screenshot
+
+Here is a screenshot of one user test sessions. The user is able to see the virtual machine screen in real time. User can also see the selenium test session as it is being executed.
+
+=begin HTML
+<p><img src="https://rawgit.com/hernan604/BrowserStack-Clone/master/app.png" alt="Screenshot" /></p>
+=end HTML
+
+=head2 TODO 
+
+Create new virtual machine in pristine mode (fresh virtualmachines)
+
+Figure out how to create virtualmachines with selenium and iOS and Android
+
+Other things...

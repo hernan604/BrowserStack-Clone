@@ -1,0 +1,9 @@
+Bot::Screenshot
+
+This bots listen to 'session_start' queue.
+When a new session gets created, it downloads the screenshot every 2 second's, untill the session is over. For at most 10minutes.
+
+The bot will download each screenshot and will save into: public/v1/screenshots-live/XXXXX-XXXXX-XXXXX-XXXX.png   (session id)
+
+This allows the site to show the updated screenshots
+

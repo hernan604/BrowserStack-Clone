@@ -1,0 +1,3 @@
+Mojo::VM::Monitor
+
+This mojolicious server receives a machine name and returns its screenshot.

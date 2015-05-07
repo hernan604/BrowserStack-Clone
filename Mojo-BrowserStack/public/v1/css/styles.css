@@ -1,0 +1,76 @@
+body {
+    background : #f0f0f0;
+}
+
+.test-summary {
+    width: 400px;
+}
+
+.test-summary td:first-child {
+    width: 100px;
+    font-weight: bold;
+}
+
+.test-summary td {
+    border: 0px solid #ccc;
+}
+
+.test-steps {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.test-steps tr:first-child {
+    font-weight: bold;
+    border-top: 1px solid #CCC;
+}
+.test-steps tr:first-child td {
+    padding: 10px 0;
+}
+
+.test-steps tr td:first-child {
+    padding-left: 10px;
+}
+
+.test-steps tr td:last-child {
+    padding-left: 10px;
+}
+
+
+.test-steps tr {
+    border-bottom: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+}
+
+.test-steps .created {
+    width: 210px;
+}
+
+
+.test-sessions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.test-sessions > li:hover {
+    background: #ccc;
+}
+
+.test-sessions .title {
+    color: #000;
+    font-weight: bold;
+}
+
+.accesskeys td {
+    border: 1px solid #CCC;
+}
+
+.accesskeys td:first-child {
+    width: 100px;
+}
+
+.machine-screenshot img {
+    width: 350px;
+    margin: 0 auto;
+}
