@@ -10,6 +10,8 @@ This browserstack clone is built on perl, with plack and mojolicious. When finis
 
 Here is a screenshot of one user test sessions. The user is able to see the virtual machine screen in real time. User can also see the selenium test session as it is being executed.
 
+L<Screenshot|https://rawgit.com/hernan604/BrowserStack-Clone/master/app.png>
+
 =begin HTML
 
 <p><img src="https://rawgit.com/hernan604/BrowserStack-Clone/master/app.png" alt="Screenshot" /></p>
