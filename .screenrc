@@ -14,12 +14,11 @@ defscrollback 10000
 screen -t "client"                  vim node.js
 
 chdir PlackSeleniumProxy
-screen -t "SelSrv:4444"             vim -O plack.pl lib/Plack/Middleware/Screenshot.pm
+screen -t "PlackSeleniumProxy"      vim -O plack.pl lib/Plack/Middleware/Screenshot.pm
+screen -t "PlackSeleniumProxy:4444" ./start.sh
 
 chdir ../Mojo-BrowserStack
 screen -t "BS-Interface"            vim -O lib/Mojo/BrowserStack.pm lib/Mojo/BrowserStack/Screenshot.pm
-
-chdir ../Mojo-BrowserStack
 screen -t "BS-Interface:8001"       ./start.sh
 
 chdir ../BOT-Live-Screenshot
@@ -27,6 +26,8 @@ screen -t "BOT-Screenshot"          ./start.sh
 
 chdir ../Mojo-BrowserStack-DB
 screen -t "BS-DB"                   vim -O lib/Mojo/BrowserStack/DB.pm migrations.sql
+
+screen -t "PSQL"                    psql browserstack
 
 chdir ../Mojo-VM-Monitor
 screen -t "VM-Monitor"              vim lib/Mojo/VM/Monitor.pm
