@@ -23,13 +23,17 @@ sub call {
             warn "=>>>> UA REQ " . $uri->as_string;
             $env->{_}->{SELENIUM_REQUEST_START} =
               $env->{_}->{helper}->_timeofday;
+
+            my $content =$self->remove_platform_definition( $req, $env ) if $req->content =~ m#platform#g;
+
             my $ua_res = $env->{_}->{helper}->ua->$method(
                 $uri->as_string,
                 {
                     headers => $req->headers,
-                    content => $req->content,
+                    content => $content || $req->content,
                 }
             );
+
             $env->{_}->{SELENIUM_REQUEST_FINISH} =
               $env->{_}->{helper}->_timeofday;
             $env->{_}->{SELENIUM_REQUEST_ELAPSED} =
@@ -44,6 +48,22 @@ sub call {
             return;
         }
     );
+}
+
+sub remove_platform_definition {
+    #the server was already chosen based on wanted platform. Its not necessary to pass on this info. If the information is omitted it will be "ANY" and its no problem for the destiny server.
+    my $self = shift;
+    my $req = shift;
+    my $env = shift;
+    my $content = $env->{_}->{helper}->_decode_json( $req->content );
+
+    if ( exists $content->{desiredCapabilities} 
+    and exists $content->{desiredCapabilities}->{ platform } ) {
+        delete $content->{desiredCapabilities}->{ platform };
+        $content = $env->{_}->{helper}->_encode_json( $content );
+        $req->headers->remove_header('content-length');
+        return $content;
+    }
 }
 
 1;
