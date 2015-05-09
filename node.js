@@ -17,8 +17,17 @@ browser.init({
 //  browserName:'firefox'
       tags : ["examples"]
     , name: "This is an example test"
-    , browserName: 'firefox'
-    , version: 1
+//  , browserName: 'ie'
+//  , browserName: 'firefox'
+//  , browserName: 'firefox'
+//  , version: 33
+//  , platform: 'linux'
+
+
+    , browserName: 'ie'
+    , version: 10
+    , platform: 'windows7'
+
 }, function() {
  
     browser.get("http://saucelabs.com/test/guinea-pig", function() {
