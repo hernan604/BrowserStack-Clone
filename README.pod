@@ -18,7 +18,37 @@ L<Screenshot|https://rawgit.com/hernan604/BrowserStack-Clone/master/app.png>
 
 =end HTML
 
-=head2 How-to Prepare a linux box
+=head2 How-to prepare a windows box with selenium and some browsers
+
+You will need to prepare as many windows boxes as you wish. On these vm you must install selenium-driver-server with a couple browsers. Then you must execute and start the selenium server.
+
+=head3 Install firefox
+
+Install some firefox and download the firefox webdriver from the selenium download page
+
+=head3 Install chrome
+
+Install some chrome and download the chrome webdriver from selenium download page
+
+=head3 Install ie
+
+Download the internet explorer webdriver from selenium downlolad page
+
+=head3 Install 'Oracle' java 7
+
+Got to oracle site and download java 7 and install on the windows box.
+
+=head3 Install Selenium server
+
+Download the selenium jar from seleniumhq.com > downloads
+
+=head3 Start Selenium
+
+Open cmd prompt and execute:
+
+ java -jar ...
+
+=head2 How-to Prepare a linux box with selenium and some browser
 
 Here is described steps to prepare a linux box to become a selenium server
 
@@ -29,7 +59,7 @@ Here is described steps to prepare a linux box to become a selenium server
  $ sudo apt-get update
  $ sudo aptitude install google-chrome-stable
 
-=head3 Install 'Oracle' java on ubuntu linux
+=head3 Install 'Oracle' java 7 on ubuntu linux
 
  sudo apt-get install python-software-properties
  sudo add-apt-repository ppa:webupd8team/java
@@ -55,4 +85,5 @@ Other things...
 Test opera drivers: 
 
 =item Opera 12-15 https://github.com/operasoftware/operaprestodriver
+
 =item Opera 15+ https://github.com/operasoftware/operachromiumdriver
