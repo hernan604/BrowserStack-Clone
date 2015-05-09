@@ -18,6 +18,32 @@ L<Screenshot|https://rawgit.com/hernan604/BrowserStack-Clone/master/app.png>
 
 =end HTML
 
+=head2 How-to Prepare a linux box
+
+Here is described steps to prepare a linux box to become a selenium server
+
+=head3 install linux google-chrome
+
+ $ sudo add-apt-repository "deb http://dl.google.com/linux/chrome/deb/ stable main"
+ $ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+ $ sudo apt-get update
+ $ sudo aptitude install google-chrome-stable
+
+=head3 Install 'Oracle' java on ubuntu linux
+
+ sudo apt-get install python-software-properties
+ sudo add-apt-repository ppa:webupd8team/java
+ sudo apt-get update
+ sudo apt-get install oracle-java7-installer
+
+=head3 Install Selenium
+
+Download the selenium jar from seleniumhq.com > downloads
+
+=head3 Start Selenium
+
+ java -jar ...
+
 =head2 TODO 
 
 Create new virtual machine in pristine mode (fresh virtualmachines)
@@ -25,3 +51,8 @@ Create new virtual machine in pristine mode (fresh virtualmachines)
 Figure out how to create virtualmachines with selenium and iOS and Android
 
 Other things...
+
+Test opera drivers: 
+
+=item Opera 12-15 https://github.com/operasoftware/operaprestodriver
+=item Opera 15+ https://github.com/operasoftware/operachromiumdriver
