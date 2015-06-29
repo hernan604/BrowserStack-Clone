@@ -72,7 +72,11 @@ Download the selenium jar from seleniumhq.com > downloads
 
 =head3 Start Selenium
 
- java -jar ...
+ java 
+ -Dwebdriver.chrome.driver="C:\Users\IEUser\Desktop\chromedriver.exe" 
+ -Dwebdriver.ie.driver="C:\Users\IEUser\Desktop\IEDriverServer.exe" 
+ -Dwebdriver.opera.driver="C:\Users\IEUser\Desktop\operadriver.exe" 
+ -jar C:\Users\IEUser\Desktop\selenium-server-standalone-2.45.0.jar
 
 =head2 TODO 
 
